@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menú Principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Bienvenido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <p>Desliza hacia la izquierda para ver las funciones que BitacorApp te ofrece</p>
+</ion-content>
+
+<ion-list>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" class="ion-text-center">
+        <ion-menu-toggle auto-hide="false">
+          <ion-item>
+            <ion-button class="contact-button" expand="full" color="primary" [routerLink]="'/formulariocontacto'" routerDirection="forward">
+              ¿Buscas Ayuda? Contactanos
+            </ion-button>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-list>

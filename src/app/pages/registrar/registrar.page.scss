@@ -1,0 +1,17 @@
+ion-header {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
+  
+  ion-title {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  ion-list {
+    margin-top: 60px; /* Ajusta este valor según el tamaño de tu encabezado */
+  }

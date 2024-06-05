@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Galeria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let image of images">
+      <ion-img [src]="image"></ion-img>
+    </ion-item>
+  </ion-list>
+
+  <input type="file" (change)="onImageUpload($event)" accept="image/*">
+</ion-content>

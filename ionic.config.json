@@ -1,0 +1,7 @@
+{
+  "name": "BITACORAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>recordatorios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Recordatorios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating">Texto aquí (máx 50 caracteres)</ion-label>
+    <ion-input [(ngModel)]="nuevoRecordatorio.texto" maxlength="50"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Urgencia</ion-label>
+    <ion-select [(ngModel)]="nuevoRecordatorio.urgencia">
+      <ion-select-option value="baja">Baja</ion-select-option>
+      <ion-select-option value="media">Media</ion-select-option>
+      <ion-select-option value="alta">Alta</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="full" (click)="agregarRecordatorio()">Agregar Recordatorio</ion-button>
+
+  <h1>Listado</h1>
+
+  <ion-item *ngFor="let recordatorio of recordatorios">
+    <ion-label>
+      {{ recordatorio.texto }} ({{ recordatorio.fecha | date:'short' }}, Urgencia: {{ recordatorio.urgencia }})
+    </ion-label>
+  </ion-item>
+</ion-content>
